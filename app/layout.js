@@ -2,7 +2,7 @@ import './globals.css'
 import './globals.scss'
 import { site } from '@/content/config'
 import { Providers } from '@/app/providers'
-import { sourceSans3Regular, cinzelBold } from '@/app/fonts'
+import { interBody, forumHeading } from '@/app/fonts'
 import Lenis_Provider from '@/components/providers/Lenis_Provider'
 import Navigation_Clip from '@/components/transitions/Navigation_Clip'
 import Animation_Wrapper from '@/components/transitions/Animation_Wrapper'
@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
 		<html
 			lang="en"
 			suppressHydrationWarning
-			className={`light ${sourceSans3Regular.variable} ${cinzelBold.variable}`}
+			className={`light ${interBody.variable} ${forumHeading.variable}`}
 		>
 			<body suppressHydrationWarning className="font-sans antialiased">
 				{/* Navigation Overlay */}

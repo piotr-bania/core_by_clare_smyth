@@ -2,22 +2,29 @@
 
 /* ---------- Typography variables ---------- */
 @font-face {
-	font-family: 'Cinzel Bold';
-	src: url('../public/fonts/Cinzel-Bold.ttf');
+	font-family: 'Roslindale-DisplayCondensedItalic-Testing';
+	src: url('../public/fonts/Roslindale/Roslindale-DisplayCondensedItalic-Testing.woff');
+}
+@font-face {
+	font-family: 'Roslindale-DisplayMedium-Testing';
+	src: url('../public/fonts/Roslindale/Roslindale-DisplayMedium-Testing.woff');
 }
 
 @font-face {
-	font-family: 'Source Sans 3';
-	src: url('../public/fonts/SourceSans3-Regular.ttf');
+	font-family: 'Inter Light';
+	src: url('../public/fonts/Inter-Light.ttf');
 }
 
 // Font families
-$heading_font: 'Cinzel Bold', sans-serif;
-$paragraph_font: 'Source Sans 3', sans-serif;
+$heading_font: 'Roslindale-DisplayCondensedItalic-Testing', sans-serif;
+$paragraph_font: 'Inter Light', sans-serif;
+$link_font: 'Roslindale-DisplayMedium-Testing', sans-serif;
 
 // Font weights
 $font_bold: 700;
+$font_medium: 500;
 $font_regular: 400;
+$font_light: 300;
 
 html,
 body {
@@ -44,7 +51,7 @@ h5,
 h6 {
 	color: $heading;
 	font-family: $heading_font;
-	font-weight: $font_bold;
+	font-weight: $font_light;
 	line-height: 1.2;
 	padding: 0;
 	margin: 0;
@@ -52,7 +59,6 @@ h6 {
 
 h1 {
 	font-size: $header_1;
-	text-transform: uppercase;
 }
 
 h2 {
@@ -78,6 +84,7 @@ h6 {
 p {
 	color: $text;
 	font-family: $paragraph_font;
+	font-size: $paragraph;
 	line-height: 1.3;
 	margin: 0;
 	padding: 0;
@@ -85,8 +92,8 @@ p {
 
 a {
 	color: $primary;
-	font-size: $paragraph;
-	font-family: $paragraph_font;
+	font-size: $link;
+	font-family: $link_font;
 	text-decoration: none;
 	width: max-content;
 	transition: all 0.5s ease-in-out;
@@ -98,7 +105,8 @@ a {
 
 .link {
 	color: $primary;
-	font-size: $paragraph;
+	font-size: $link;
+	font-family: $link_font;
 	text-decoration: underline $primary 2px;
 	width: max-content;
 	transition: all 0.5s ease-in-out;
@@ -110,7 +118,7 @@ a {
 }
 
 button {
-	font-family: $paragraph_font;
+	font-family: $heading_font;
 	font-size: calc($paragraph * 0.75);
 	text-transform: uppercase;
 	letter-spacing: 1px;

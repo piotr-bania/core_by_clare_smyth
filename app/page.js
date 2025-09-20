@@ -8,6 +8,13 @@ export default function Home_Page() {
 			<div className="min-h-screen flex flex-col items-center justify-center text-center gap-4 p-4 md:p-8 lg:p-12">
 				<div className="flex flex-col">
 					<Headings h1Text="Bespoke Core Starter Kit" />
+					<Headings h2Text="Bespoke Core Starter Kit" />
+					<Headings h3Text="Bespoke Core Starter Kit" />
+					<Headings h4Text="Bespoke Core Starter Kit" />
+					<Headings h5Text="Bespoke Core Starter Kit" />
+					<Headings h6Text="Bespoke Core Starter Kit" />
+				</div>
+				<div className="max-w-xl">
 					<Paragraph text="Minimal foundation for restaurant & hospitality websites" />
 				</div>
 				<div className="flex gap-4">

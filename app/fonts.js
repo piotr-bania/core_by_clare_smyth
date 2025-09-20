@@ -1,15 +1,17 @@
-import { Source_Sans_3, Cinzel } from 'next/font/google'
+import { Forum, Inter } from 'next/font/google'
 
-export const sourceSans3Regular = Source_Sans_3({
+export const forumHeading = Forum({
+	subsets: ['latin'],
+	weight: ['400'],
+	style: ['normal'],
+	display: 'swap',
+	variable: '--font-heading',
+})
+
+export const interBody = Inter({
 	subsets: ['latin'],
 	weight: ['400'],
 	display: 'swap',
 	variable: '--font-body',
 })
 
-export const cinzelBold = Cinzel({
-	subsets: ['latin'],
-	weight: ['700'],
-	display: 'swap',
-	variable: '--font-heading',
-})
