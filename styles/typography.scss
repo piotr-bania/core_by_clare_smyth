@@ -1,48 +1,94 @@
 @use 'styles/tokens' as *;
 
 /* ---------- Typography variables ---------- */
+/* Roslindale Display Condensed Bold Italic */
 @font-face {
-	font-family: 'Roslindale-DisplayCondensedItalic-Testing';
-	src: url('../public/fonts/Roslindale/Roslindale-DisplayCondensedItalic-Testing.woff');
-}
-@font-face {
-	font-family: 'Roslindale-DisplayMedium-Testing';
-	src: url('../public/fonts/Roslindale/Roslindale-DisplayMedium-Testing.woff');
-}
-
-@font-face {
-	font-family: 'Inter Light';
-	src: url('../public/fonts/Inter-Light.ttf');
+	font-family: 'Roslindale-Display-Condensed-Bold-Italic';
+	src: url('../public/fonts/Roslindale/Roslindale_Display_Condensed_Bold_Italic_Testing.woff')
+		format('woff');
+	font-weight: 700;
+	font-style: italic;
 }
 
-// Font families
-$heading_font: 'Roslindale-DisplayCondensedItalic-Testing', sans-serif;
-$paragraph_font: 'Inter Light', sans-serif;
-$link_font: 'Roslindale-DisplayMedium-Testing', sans-serif;
+/* Roslindale Display Condensed Italic */
+@font-face {
+	font-family: 'Roslindale-Display-Condensed-Italic';
+	src: url('../public/fonts/Roslindale/Roslindale_Display_Condensed_Italic_Testing.woff')
+		format('woff');
+	font-weight: 400;
+	font-style: italic;
+}
 
-// Font weights
-$font_bold: 700;
-$font_medium: 500;
-$font_regular: 400;
-$font_light: 300;
+/* Roslindale Display Medium */
+@font-face {
+	font-family: 'Roslindale-Display-Medium';
+	src: url('../public/fonts/Roslindale/Roslindale_Display_Medium_Testing.woff')
+		format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
 
+/* Roslindale Display Narrow Bold */
+@font-face {
+	font-family: 'Roslindale-Display-Narrow-Bold';
+	src: url('../public/fonts/Roslindale/Roslindale_Display_Narrow_Bold_Testing.woff')
+		format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+
+/* Roslindale Display Regular */
+@font-face {
+	font-family: 'Roslindale-Display-Regular';
+	src: url('../public/fonts/Roslindale/Roslindale_Display_Regular_Testing.woff')
+		format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Neue Haas Grotesk (Display Roman) */
+@font-face {
+	font-family: 'Neue-Haas-Grotesk-Display-Roman';
+	src: url('../public/fonts/Neue_Haas_Grotesk/Neue_Haas_Grot_Disp_Roman_trial.otf')
+		format('opentype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* ---------- Font family variables ---------- */
+$font-roslindale-narrow-bold: 'Roslindale-Display-Narrow-Bold', serif;
+$font-roslindale-condensed-bolditalic: 'Roslindale-Display-Condensed-Bold-Italic',
+	serif;
+$font-roslindale-condensed-italic: 'Roslindale-Display-Condensed-Italic', serif;
+$font-roslindale-medium: 'Roslindale-Display-Medium', serif;
+$font-roslindale-regular: 'Roslindale-Display-Regular', serif;
+
+$font-haas: 'Neue-Haas-Grotesk-Display-Roman', sans-serif;
+
+/* ---------- Semantic roles ---------- */
+$heading_font: $font-roslindale-narrow-bold;
+$subheading_font: $font-roslindale-condensed-italic;
+$paragraph_font: $font-haas;
+$quote_font: $font-roslindale-condensed-bolditalic;
+$link_font: $font-roslindale-medium;
+
+/* ---------- Font weights ---------- */
+$font-bold: 700;
+$font-medium: 500;
+$font-regular: 400;
+$font-light: 300;
+
+/* ---------- Base ---------- */
 html,
 body {
-	font-family: var(--font-body), ui-sans-serif, system-ui;
+	background: $background;
+	font-family: $paragraph_font, ui-sans-serif, system-ui;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: var(--font-heading), ui-sans-serif, system-ui;
-}
-
-/* ---------- Typography styles ---------- */
+/* ---------- Headings (Roslindale family only) ---------- */
 h1,
 h2,
 h3,
@@ -50,23 +96,47 @@ h4,
 h5,
 h6 {
 	color: $heading;
-	font-family: $heading_font;
-	font-weight: $font_light;
-	line-height: 1.2;
-	padding: 0;
 	margin: 0;
+	padding: 0;
+	line-height: 1.15;
+	-webkit-font-smoothing: antialiased;
+	font-feature-settings: 'liga', 'kern';
 }
 
+/* H1 — Roslindale Display Narrow Bold, CAPS */
 h1 {
+	font-family: $font-roslindale-narrow-bold;
+	font-weight: $font-bold;
+	font-style: normal;
+	text-transform: uppercase;
 	font-size: $header_1;
 }
 
+/* H2 — Roslindale Display Condensed Bold Italic, CAPS */
 h2 {
+	font-family: $font-roslindale-condensed-bolditalic;
+	font-weight: $font-bold;
+	font-style: italic;
+	text-transform: uppercase;
 	font-size: $header_2;
 }
 
+/* H3 — Roslindale Display Medium */
 h3 {
+	font-family: $font-roslindale-medium;
+	font-weight: $font-medium;
+	font-style: normal;
+	letter-spacing: 0;
 	font-size: $header_3;
+}
+
+/* H4–H6 — Roslindale Display Regular (use tracking for refinement) */
+h4,
+h5,
+h6 {
+	font-family: $font-roslindale-regular;
+	font-weight: $font-regular;
+	font-style: normal;
 }
 
 h4 {
@@ -81,46 +151,122 @@ h6 {
 	font-size: $header_6;
 }
 
+/* ---------- Paragraphs ---------- */
 p {
 	color: $text;
 	font-family: $paragraph_font;
+	font-weight: $font-regular;
 	font-size: $paragraph;
-	line-height: 1.3;
 	margin: 0;
 	padding: 0;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Quotes (Roslindale Display Condensed Italic) ---------- */
+blockquote,
+.q,
+.quote {
+	color: $primary;
+	font-size: $header_6;
+	font-weight: $font-regular;
+	font-family: $font-roslindale-condensed-italic;
+	font-style: italic;
+	margin: 0;
+}
+.quote--center {
+	text-align: center;
+}
+.quote--tight {
+	line-height: 1.1;
 }
 
 a {
-	color: $primary;
-	font-size: $link;
+	color: transparent;
 	font-family: $link_font;
+	font-weight: $font-medium;
+	font-size: $link;
 	text-decoration: none;
-	width: max-content;
-	transition: all 0.5s ease-in-out;
+	width: fit-content;
+	--base: #{$heading};
+	--wipe: #{$secondary};
+	background-image: linear-gradient(90deg, var(--wipe) 0 0),
+		linear-gradient(90deg, var(--base) 0 0);
+	background-size: 0% 100%, 100% 100%;
+	background-position: 0 0, 0 0;
+	background-repeat: no-repeat;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	transition: background-size 1s cubic-bezier(0.19, 1, 0.22, 1);
 
-	&:hover {
-		color: $secondary;
+	&:hover,
+	&:focus-visible {
+		background-size: 100% 100%, 100% 100%;
 	}
 }
 
-.link {
-	color: $primary;
-	font-size: $link;
-	font-family: $link_font;
-	text-decoration: underline $primary 2px;
-	width: max-content;
-	transition: all 0.5s ease-in-out;
+.cursor_trail {
+	/* follow (raw cursor coords) */
+	--x: 0px;
+	--y: 0px;
 
-	&:hover {
-		color: $secondary;
-		text-decoration: underline $secondary 2px;
+	/* visuals (JS updates these) */
+	--size: 14px;
+	--radius: 2px;
+	--rotate: 45deg;
+	--stroke: 7px; /* thick when idle, thin when active */
+	--ring: #{$secondary}; /* ring colour */
+	--fill: #{$secondary}; /* fill colour */
+	--fill-o: 1; /* 1 idle → 0 on hover */
+
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: var(--size);
+	height: var(--size);
+	box-sizing: border-box;
+	pointer-events: none;
+	z-index: 100;
+
+	/* keep origin dead-centre */
+	transform: translate3d(var(--x), var(--y), 0) translate(-50%, -50%);
+	transform-origin: center;
+	transition: width 1000ms cubic-bezier(0.19, 1, 0.22, 1),
+		height 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+
+	@media (prefers-reduced-motion: reduce) {
+		transition: none;
 	}
-}
 
-button {
-	font-family: $heading_font;
-	font-size: calc($paragraph * 0.75);
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+	/* Inner fill (below the ring) */
+	&::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		border-radius: var(--radius);
+		background: var(--fill);
+		opacity: var(--fill-o);
+		transform: rotate(var(--rotate));
+		z-index: 1;
+		transition: opacity 200ms ease,
+			border-radius 1000ms cubic-bezier(0.19, 1, 0.22, 1),
+			transform 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+	}
+
+	/* Ring (above the fill) */
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		border-style: solid;
+		border-color: var(--ring);
+		border-width: var(--stroke); /* animates both ways */
+		border-radius: var(--radius);
+		background: transparent;
+		transform: rotate(var(--rotate));
+		z-index: 2;
+		transition: border-width 500ms cubic-bezier(0.19, 1, 0.22, 1),
+			border-radius 1000ms cubic-bezier(0.19, 1, 0.22, 1),
+			transform 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+	}
 }

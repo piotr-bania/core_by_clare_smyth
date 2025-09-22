@@ -76,9 +76,9 @@
 	},
 
 	"transitions": {
-		"overlay": { "color": "#76688c", "zIndex": 100 },
-		"enter": { "duration": 0.6, "delay": 0.0, "ease": "easeInOut" },
-		"exit": { "duration": 0.6, "delay": 0.0, "ease": "easeInOut" },
+		"overlay": { "color": "#0f413c", "zIndex": 100 },
+		"enter": { "duration": 0.75, "delay": 0.0, "ease": "easeInOut" },
+		"exit": { "duration": 0.75, "delay": 0.0, "ease": "easeInOut" },
 
 		"page": { "variant": "fade", "duration": 0.45, "easing": "easeInOut" },
 		"reveal": {

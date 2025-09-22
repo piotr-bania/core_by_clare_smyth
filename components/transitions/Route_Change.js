@@ -1,4 +1,5 @@
 'use client'
+
 import Link from 'next/link'
 
 export default function Route_Change({ href, children, className, onClick }) {
@@ -11,10 +12,8 @@ export default function Route_Change({ href, children, className, onClick }) {
 		)
 	}
 	return (
-		<div className={className}>
-			<Link href={href} onClick={handleClick}>
-				{children}
-			</Link>
-		</div>
+		<Link href={href} onClick={handleClick} className={`link ${className}`} >
+			{children}
+		</Link>
 	)
 }

@@ -5,28 +5,23 @@ import Route_Change from '@/components/transitions/Route_Change'
 export default function Home_Page() {
 	return (
 		<main>
-			<div className="min-h-screen flex flex-col items-center justify-center text-center gap-4 p-4 md:p-8 lg:p-12">
+			<div className="min-h-screen flex flex-col items-start justify-center text-left gap-4 p-4 md:p-8 lg:p-12">
 				<div className="flex flex-col">
-					<Headings h1Text="Bespoke Core Starter Kit" />
-					<Headings h2Text="Bespoke Core Starter Kit" />
-					<Headings h3Text="Bespoke Core Starter Kit" />
-					<Headings h4Text="Bespoke Core Starter Kit" />
-					<Headings h5Text="Bespoke Core Starter Kit" />
-					<Headings h6Text="Bespoke Core Starter Kit" />
+					<Headings h1Text="The Core team" />
+					<Headings h2Text="This is heading 2" />
+					<Headings h3Text="This is heading 3" />
+					<Headings h4Text="This is heading 4" />
+					<Headings h5Text="This is heading 5" />
+					<Headings h6Text="This is heading 6" />
+					<Paragraph
+						text="“Everyone in our building is the best they can be.” - Clare Smyth"
+						className="quote"
+					/>
 				</div>
 				<div className="max-w-xl">
-					<Paragraph text="Minimal foundation for restaurant & hospitality websites" />
+					<Paragraph text="This is a paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
 				</div>
-				<div className="flex gap-4">
-					<Route_Change
-						target="_blank"
-						rel="noopener noreferrer"
-						href="https://github.com/piotr-bania/bespoke_core"
-					>
-						View Documentation
-					</Route_Change>
-					<Route_Change href="/about">About Page</Route_Change>
-				</div>
+				<Route_Change href="/about">About Page</Route_Change>
 			</div>
 		</main>
 	)
