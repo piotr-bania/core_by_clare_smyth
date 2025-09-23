@@ -52,7 +52,7 @@ It is not affiliated with or commissioned by the restaurant — it exists purely
 
 - `app/` – Next.js app router pages and layouts
 - `components/` – reusable UI & transitions
-- `content/Config.json` – **single source of truth** for site content
+- `content/config.json` – **single source of truth** for site content
 - `lib/config.js` – safe getters for config values
 - `styles/_tokens.scss` – brand colors, radii, typography scale
 - `app/hero.mjs` – HeroUI theme setup
