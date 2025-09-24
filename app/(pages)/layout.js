@@ -1,12 +1,13 @@
-import './globals.css'
-import './globals.scss'
+import '@/app//globals.css'
+import '@/app/globals.scss'
 import { site } from '@/content/config'
 import { Providers } from '@/app/providers'
 import { interBody, forumHeading } from '@/app/fonts'
+import Navbar from '@/components/ui/layout/Navbar'
+import Cursor_Trail from '@/components/transitions/Cursor_Trail'
 import Lenis_Provider from '@/components/providers/Lenis_Provider'
 import Navigation_Clip from '@/components/transitions/Navigation_Clip'
 import Animation_Wrapper from '@/components/transitions/Animation_Wrapper'
-import Cursor_Trail from '@/components/transitions/Cursor_Trail'
 
 export const metadata = {
 	title: site.title || 'Website Title',
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
 
 				{/* Main Content */}
 				<Providers>
+					<Navbar />
 					<Animation_Wrapper>
 						<Lenis_Provider />
 						{children}

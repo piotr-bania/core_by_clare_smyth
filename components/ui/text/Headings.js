@@ -1,6 +1,5 @@
 'use client'
 
-import { motion as m } from 'motion/react'
 import {
 	heading_1_variant,
 	heading_2_variant,
@@ -9,9 +8,10 @@ import {
 	heading_5_variant,
 	heading_6_variant,
 } from '@/animations/ui/Text_Variants'
+import { motion as m } from 'motion/react'
 
-const Headings = ({ className, ...rest }) => {
-	const animationVariants = {
+export default function Headings({ className = '', ...rest }) {
+	const variants = {
 		h1: heading_1_variant,
 		h2: heading_2_variant,
 		h3: heading_3_variant,
@@ -21,28 +21,23 @@ const Headings = ({ className, ...rest }) => {
 	}
 
 	return (
-		<div className={className}>
+		<>
 			{Object.entries(rest).map(([key, text]) => {
 				if (!text) return null
-
 				const level = key.toLowerCase().replace('text', '')
 				const Tag = m[level] || m.h2
-				const variant = animationVariants[level]
-
 				return (
 					<Tag
 						key={level}
 						initial="hidden"
 						animate="visible"
-						variants={variant}
+						variants={variants[level]}
 						className={className}
 					>
 						{text}
 					</Tag>
 				)
 			})}
-		</div>
+		</>
 	)
 }
-
-export default Headings

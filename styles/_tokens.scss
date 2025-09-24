@@ -1,24 +1,34 @@
-// ---------- Colors ----------
-$background: #fbf6f4;
-$foreground: #0f413c;
-$divider: #edece3;
-$primary: #c1856a;
-$secondary: #A76446;
-$heading: #08211F;
-$text: #282826;
-$white: #ffffff;
+@use './brand_colors' as *;
 
-// ---------- Fluid fonts ----------
-$paragraph: clamp(0.88rem, 0.53vi + 0.74rem, 1.38rem);
-$link: clamp(0.98rem, 0.77vi + 0.79rem, 1.72rem);
-$header_6: clamp(1.11rem, 1.1vi + 0.83rem, 2.15rem);
-$header_5: clamp(1.25rem, 1.52vi + 0.87rem, 2.69rem);
-$header_4: clamp(1.4rem, 2.06vi + 0.89rem, 3.36rem);
-$header_3: clamp(1.58rem, 2.76vi + 0.89rem, 4.2rem);
-$header_2: clamp(1.77rem, 3.65vi + 0.86rem, 5.25rem);
-$header_1: clamp(2rem, 4.8vi + 0.8rem, 6.56rem);
+// SCSS semantic tokens
+$primary: $sand;
+$divider: $clay;
+$background_dark: $pine;
+$background_medium: $silk;
+$background_light: $ivory;
+$text: rgba($pine, 0.85);
 
-// ---------- Fluid space ----------
+// Expose as CSS variables for HeroUI and JS
+:root {
+	--color-primary: #{$primary};
+	--color-divider: #{$divider};
+	--color-background-dark: #{$background_dark};
+	--color-background-medium: #{$background_medium};
+	--color-background-light: #{$background_light};
+	--color-text: #{$text};
+}
+
+// Fluid fonts
+$paragraph: clamp(0.75rem, 0.39vi + 0.65rem, 1.13rem);
+$cta: clamp(0.9rem, 0.6vi + 0.75rem, 1.47rem);
+$header_6: clamp(1.08rem, 0.9vi + 0.86rem, 1.93rem);
+$header_5: clamp(1.3rem, 1.3vi + 0.97rem, 2.53rem);
+$header_4: clamp(1.56rem, 1.85vi + 1.09rem, 3.31rem);
+$header_3: clamp(1.87rem, 2.6vi + 1.22rem, 4.34rem);
+$header_2: clamp(2.24rem, 3.63vi + 1.33rem, 5.69rem);
+$header_1: clamp(2.69rem, 5.01vi + 1.43rem, 7.45rem);
+
+// Fluid space
 $small: clamp(1.13rem, calc(1.04rem + 0.41vw), 1.5rem);
 $medium: clamp(1.69rem, calc(1.57rem + 0.61vw), 2.25rem);
 $large: clamp(2.25rem, calc(2.09rem + 0.81vw), 3rem);

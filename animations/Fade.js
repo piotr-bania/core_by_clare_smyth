@@ -1,12 +1,8 @@
 export const fade_variant = {
-	hidden: {
-		opacity: 0,
-	},
+	hidden: { opacity: 0, y: -50 },
 	visible: {
 		opacity: 1,
-		transition: {
-			duration: 0.2,
-			ease: 'easeInOut',
-		},
+		y: 0,
+		transition: { duration: 1.5, delay: 0.3, ease: 'easeInOut' },
 	},
 }

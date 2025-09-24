@@ -3,7 +3,7 @@
 import { motion as m } from 'motion/react'
 import { paragraph_variant } from '@/animations/ui/Text_Variants'
 
-const Paragraph = ({ className, text }) => {
+export default function Paragraph({ className, text }) {
 	return (
 		<div className={className}>
 			<m.p
@@ -17,5 +17,3 @@ const Paragraph = ({ className, text }) => {
 		</div>
 	)
 }
-
-export default Paragraph

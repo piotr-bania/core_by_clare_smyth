@@ -2,7 +2,7 @@
 
 import Paragraph from '@/components/ui/text/Paragraph'
 import Route_Button from '@/components/ui/buttons/Route_Button'
-import Divider_Component from '@/components/ui/dividers/Divider_Component'
+import Divider from '@/components/ui/dividers/Divider_Component'
 
 export default function Routes_Group({
 	title,
@@ -38,7 +38,7 @@ export default function Routes_Group({
 					)
 				})}
 			</div>
-			{showDivider && <Divider_Component />}
+			{showDivider && <Divider />}
 		</div>
 	)
 }
