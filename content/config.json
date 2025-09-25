@@ -1,78 +1,93 @@
 {
 	"site": {
 		"name": "Bespoke Core Starter",
-		"title": "Fine Dining Web Experiences",
-		"description": "A minimal, configurable starter for restaurant & hospitality websites.",
-		"domain": "https://example.com",
+		"title": "Core by Clare Smyth | Demo Concept – Bespoke Programming",
+		"description": "A modern demo concept for Core by Clare Smyth, reimagining the restaurant’s digital presence with refined transitions, immersive storytelling, and elegant interactions. Built by Bespoke Programming.",
+		"domain": "https://core-by-clare-smyth.vercel.app",
 		"language": "en-GB"
 	},
 
-	"navigation": {
-		"primary": [
-			{ "label": "Home", "href": "/" },
-			{ "label": "About", "href": "/about" },
-			{ "label": "Menus", "href": "/menus" },
-			{ "label": "Reservations", "href": "/reserve" },
-			{ "label": "Private Dining", "href": "/private-dining" },
-			{ "label": "Chef's Table", "href": "/chefs-table" },
-			{ "label": "Wine", "href": "/wine" },
-			{ "label": "Press", "href": "/press" },
-			{ "label": "Gift Cards", "href": "/gifts" },
-			{ "label": "Location", "href": "/location" },
-			{ "label": "Contact", "href": "/contact" }
+	"seo": {
+		"keywords": [
+			"Core by Clare Smyth",
+			"Clare Smyth restaurant",
+			"Michelin star restaurant London",
+			"fine dining website design",
+			"luxury restaurant web development",
+			"interactive web demo",
+			"Bespoke Programming projects"
 		],
-		"footer": [
-			{ "label": "Careers", "href": "/careers" },
-			{ "label": "Allergens", "href": "/allergens" },
-			{ "label": "Accessibility", "href": "/accessibility" },
-			{ "label": "Privacy", "href": "/privacy" },
-			{ "label": "Terms", "href": "/terms" }
+		"authors": [
+			{ "name": "Piotr Bania", "url": "https://bespokeprogramming.net" }
 		],
-		"booking_cta": { "label": "Book a Table", "href": "/reserve" }
+		"creator": "Bespoke Programming",
+		"publisher": "Bespoke Programming Ltd.",
+		"openGraph": {
+			"title": "Core by Clare Smyth | Demo Concept – Bespoke Programming",
+			"description": "An interactive website demo inspired by Core by Clare Smyth, showcasing refined animations, smooth page transitions, and premium restaurant web design.",
+			"url": "https://core-by-clare-smyth.vercel.app",
+			"siteName": "Bespoke Programming Demo",
+			"locale": "en_GB",
+			"type": "website"
+		},
+		"twitter": {
+			"card": "summary_large_image",
+			"title": "Core by Clare Smyth | Demo Concept – Bespoke Programming",
+			"description": "Immersive demo concept for Core by Clare Smyth with refined storytelling, scroll dividers, and luxury web design crafted by Bespoke Programming.",
+			"creator": "@yourhandle"
+		},
+		"robots": {
+			"index": true,
+			"follow": true
+		},
+		"canonical": "https://core-by-clare-smyth.vercel.app"
 	},
 
+	"navigation": [
+		{ "label": "Home", "href": "/" },
+		{ "label": "About", "href": "/about" },
+		{ "label": "Menus", "href": "/menus" },
+		{ "label": "Private Dining", "href": "/private-dining" },
+		{ "label": "Awards", "href": "/awards" },
+		{ "label": "Gifts", "href": "/gifts" },
+		{ "label": "Contact", "href": "/contact" },
+		{ "label": "Book a Table", "href": "/booking" }
+	],
+
 	"business": {
-		"address": "1 Example Street, London W1",
-		"city": "London",
-		"postcode": "W1 1AA",
-		"country": "UK",
-		"phone": "+44 20 1234 5678",
-		"email": {
-			"general": "info@example.com",
-			"reservations": "reservations@example.com",
-			"events": "events@example.com",
-			"press": "press@example.com",
-			"careers": "careers@example.com"
-		},
-		"hours": {
-			"lunch": "Wed–Sat 12:00–14:30",
-			"dinner": "Tue–Sat 18:00–22:00",
-			"closed": "Sun–Mon"
-		}
+		"name": "Core by Clare Smyth",
+		"owner": "Clare Smyth",
+		"type": "Restaurant",
+		"cuisine": ["Modern British", "Fine Dining"],
+		"rating": "3 Michelin Stars",
+		"established": "2017",
+		"address": "92 Kensington Park Rd, London W11 2PN, UK",
+		"phone": "+44 (0)20 3937 5086",
+		"email": "reservations@corebyclaresmyth.com"
 	},
 
 	"booking": {
-		"provider": "resy",
-		"url": "https://resy.com/",
-		"phone_backup": "+44 20 1234 5678",
-		"notes": "Credit card required to secure booking."
+		"enabled": true,
+		"provider": "SevenRooms",
+		"link": "https://booking.corebyclaresmyth.com",
+		"policies": {
+			"cancellation": "Cancellations must be made 48 hours in advance.",
+			"deposit": "Credit card required to secure booking."
+		}
 	},
 
 	"social": {
-		"instagram": "https://instagram.com/example",
-		"facebook": "https://facebook.com/example",
-		"tiktok": "",
-		"x": "",
-		"google_maps": "https://maps.google.com/?q=Example",
-		"opentable": "",
-		"resy": "https://resy.com/"
+		"instagram": "https://instagram.com/corebyclaresmyth",
+		"facebook": "https://facebook.com/corebyclaresmyth",
+		"twitter": "https://twitter.com/corebyclaresmyth",
+		"linkedin": "https://linkedin.com/company/corebyclaresmyth"
 	},
 
 	"integrations": {
-		"ga_id": "",
-		"gtm_id": "",
-		"meta_pixel_id": "",
-		"hotjar_id": ""
+		"googleAnalytics": "G-XXXXXXXXXX",
+		"googleTagManager": "GTM-XXXXXXX",
+		"facebookPixel": "XXXXXXXXXX",
+		"mailchimp": "core-newsletter"
 	},
 
 	"transitions": {
@@ -91,71 +106,91 @@
 	},
 
 	"policies": {
-		"cancellation_window_hours": 48,
-		"cancellation_fee": "£50 per guest",
-		"dress_code": "Smart casual",
-		"service_charge": "12.5%",
-		"allergies_notice": "Please inform us of any allergies at least 24 hours in advance.",
-		"child_policy": "Children over 12 only.",
-		"pet_policy": "Guide dogs welcome."
+		"privacy": "/privacy-policy",
+		"cookies": "/cookie-policy",
+		"terms": "/terms-and-conditions"
 	},
 
 	"awards": [
-		{ "label": "Michelin ⭐", "year": 2024 },
-		{ "label": "World’s 50 Best Discovery", "year": 2023 }
+		{
+			"year": 2021,
+			"title": "3 Michelin Stars",
+			"description": "First female British chef to achieve 3 Michelin stars."
+		},
+		{
+			"year": 2019,
+			"title": "World’s Best Female Chef",
+			"description": "Awarded by The World’s 50 Best Restaurants."
+		}
 	],
 
 	"menus": [
 		{
-			"title": "Tasting Menu",
-			"price": "£155",
-			"url": "/menus/tasting.pdf"
+			"name": "Tasting Menu",
+			"slug": "tasting",
+			"description": "A curated journey of Clare Smyth’s signature dishes.",
+			"url": "/menus/tasting"
 		},
-		{ "title": "Lunch Menu", "price": "£55", "url": "/menus/lunch.pdf" },
-		{ "title": "Wine List", "price": "", "url": "/menus/wine.pdf" }
+		{
+			"name": "Vegetarian Menu",
+			"slug": "vegetarian",
+			"description": "A seasonal menu showcasing vegetables at their best.",
+			"url": "/menus/vegetarian"
+		},
+		{
+			"name": "Wine List",
+			"slug": "wine",
+			"description": "Extensive list of international wines, hand-selected.",
+			"url": "/menus/wine"
+		}
 	],
 
 	"private_dining": {
-		"email": "events@example.com",
-		"phone": "+44 20 1234 5678",
-		"brochure_url": "/private/brochure.pdf",
-		"min_guests": 8,
-		"max_guests": 14,
-		"notes": "Bespoke menus available upon request."
+		"enabled": true,
+		"spaces": [
+			{
+				"name": "Chef’s Table",
+				"capacity": 10,
+				"description": "An exclusive table with a view of the kitchen."
+			},
+			{
+				"name": "Private Room",
+				"capacity": 20,
+				"description": "Elegant dining room for intimate gatherings."
+			}
+		],
+		"contact": "privatedining@corebyclaresmyth.com"
 	},
 
 	"gifts": {
-		"provider": "giftup",
-		"url": "https://giftcards.example.com/your-restaurant"
+		"enabled": true,
+		"provider": "Tock",
+		"link": "https://gifts.corebyclaresmyth.com",
+		"description": "Gift cards available for dining experiences at Core."
 	},
 
 	"locations": [
 		{
-			"slug": "notting-hill",
-			"label": "Notting Hill",
-			"address": "1 Example Street",
+			"name": "Core by Clare Smyth",
+			"address": "92 Kensington Park Rd, London W11 2PN",
 			"city": "London",
-			"postcode": "W11 2BQ",
 			"country": "UK",
-			"phone": "+44 20 1234 5678",
-			"booking_url": "https://resy.com/…"
+			"postcode": "W11 2PN",
+			"phone": "+44 (0)20 3937 5086",
+			"map": "https://goo.gl/maps/corebyclaresmyth"
 		}
 	],
 
 	"map": {
-		"embed_url": "https://www.google.com/maps/embed?pb=…",
-		"lat": 51.509,
-		"lng": -0.133
-	},
-
-	"seo": {
-		"og_image": "/og.jpg",
-		"twitter_handle": "@restaurant",
-		"robots": "index,follow"
+		"provider": "GoogleMaps",
+		"embedUrl": "https://www.google.com/maps/embed?pb=!1m18!...",
+		"apiKey": "AIza..."
 	},
 
 	"newsletter": {
-		"provider": "mailchimp",
-		"list_id": ""
+		"enabled": true,
+		"provider": "Mailchimp",
+		"listId": "core-subscribers",
+		"description": "Sign up to receive updates, news, and seasonal menus from Core by Clare Smyth."
 	}
 }

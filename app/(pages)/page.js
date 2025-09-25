@@ -57,7 +57,7 @@ export default function Home_Page() {
 
 				{/* Section Divider */}
 				<Section_Divider
-					steps={10}
+					steps={5}
 					bgClass="bg-[#edddd5]"
 					scrollVh={50}
 					startHold={0.67}
@@ -67,21 +67,16 @@ export default function Home_Page() {
 			<section className="bg-[#edddd5] pt-12 md:pt-24 lg:pt-36">
 				<div className="w-full h-screen flex justify-center items-center">
 					<div className="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-4 p-4 md:p-8 lg:p-12 z-1 text-center">
-						<div className="flex flex-col lg:col-start-3 lg:col-end-11 items-center">
-							<Headings
-								h2Text="Meet Clare Smyth"
-								className="left-1/2 transform -translate-x-1 text-center"
-							/>
-							<Image
-								src="/images/Image_16.jpg"
-								alt="Clare Smyth"
-								width={400}
-								height={500}
-								className="transform -translate-y-[50px] -z-1"
-							/>
-						</div>
+						<Headings
+							h2Text="More Than a Website"
+							className="flex flex-col lg:col-start-3 lg:col-end-11 items-center"
+						/>
 						<Paragraph
-							text="Clare Smyth is the driving force behind Core — a chef whose dedication to craft, sustainability, and innovation has earned her international acclaim."
+							text="What you see here is only a glimpse — crafted in just a few days to imagine what Core’s digital presence could become."
+							className="lg:col-start-4 lg:col-end-10"
+						/>
+						<Paragraph
+							text="Every scroll, every transition, every detail is intentional. Just like your cuisine."
 							className="lg:col-start-4 lg:col-end-10"
 						/>
 						<div className="lg:col-start-3 lg:col-end-11">
